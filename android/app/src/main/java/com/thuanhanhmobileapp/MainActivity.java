@@ -1,4 +1,4 @@
-package com.vuondao.qcafe;
+package com.vietydao.dungcudienchan;
 
 import com.facebook.react.ReactActivity;
 

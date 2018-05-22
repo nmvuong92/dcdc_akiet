@@ -35,7 +35,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import ChiTietSanPham from './tabs/ChiTietSanPham';
 
-import{cartCRUD} from './actions/cartAction';
+import {cartCRUD} from './actions/cartAction';
 import {isIphoneX} from './common/vUtils';
 import {getUser,getQuan,getQR} from './common/Storage';
 import {initialSyncSetUser} from './actions/authAction';
@@ -52,10 +52,9 @@ const opt_hide_tabbar={
 
 
 export const MainScreenNavigator = TabNavigator({
-    /*HomeTab:StackNavigator({
+    HomeTab:StackNavigator({
         Home:{
-            screen:Home,
-            
+            screen:Home,            
             navigationOptions: {
                 showLabel:true,
                 showIcon:true,
@@ -64,115 +63,7 @@ export const MainScreenNavigator = TabNavigator({
                 tabBarLabel:'Trang chủ',
                 tabBarIcon:  <FontAwesome color="black" size={28} name="home"/>,
             }
-        },
-        Detail:{
-            screen:Detail,
-            navigationOptions:opt_hide_tabbar
-        },
-     
-    
-        ScreenNotOnTabbar:{
-            screen:SanPham,
-            navigationOptions:opt_hide_tabbar
-        },
-        ScreenNotOnTabbar2:{
-            screen:TichDiem,
-            navigationOptions:opt_hide_tabbar
-        },
-        Home_KhuyenMai_Wrap:StackNavigator({
-            Home_KhuyenMaiScreen:{
-                screen:KhuyenMai,
-                navigationOptions:opt_hide_tabbar
-            },
-            Home_KhuyenMai_ChiTietSanPham_Wap:StackNavigator({
-                Home_KhuyenMai_ChiTietSanPham_Screen:{
-                    screen:ChiTietSanPham,
-                    navigationOptions:opt_hide_tabbar,
-                },
-                Home_KhuyenMai_ChiTietSanPham_GioHang_Wrap:StackNavigator({
-                    Home_KhuyenMai_ChiTietSanPham_GioHang_Screen:{
-                        screen:GioHang,
-                        navigationOptions:opt_hide_tabbar
-                    },
-                    Home_KhuyenMai_ChiTietSanPham_GioHang_ThanhToan_Screen:{
-                        screen:ThanhToanForm,
-                        navigationOptions:opt_hide_tabbar
-                    },
-                    Home_KhuyenMai_ChiTietSanPham_GioHang_ChiTietSanPham_Screen:{
-                        screen:ChiTietSanPham,
-                        navigationOptions:opt_hide_tabbar
-                    },
-                },{
-                    navigationOptions:{
-                        initialRouteName:"Home_KhuyenMai_ChiTietSanPham_GioHang_Screen",
-                  }
-                }), //Home_KhuyenMai_ChiTietSanPham_ChiTietSanPham_GioHang_Wrap 
-            },{
-                navigationOptions:{
-                    initialRouteName:"Home_KhuyenMai_ChiTietSanPham_Screen",
-                }
-            }), //end Home_KhuyenMai_ChiTietSanPham_Wap
-            
-        },{
-            navigationOptions:{
-                initialRouteName:"Home_KhuyenMaiScreen",
-                headerStyle:{
-                    //marginTop:24
-                }
-            }
-        }),
-        LogoutScreen:{
-            screen:Logout
-        },
-        TichDiem_Wrap:StackNavigator({
-            TichDiem_Screen:{
-                screen:TichDiem,
-                navigationOptions: opt_hide_tabbar
-            },
-            TichDiem_CTDonHang_Screen:{
-                screen:CTDonHang,
-                navigationOptions: opt_hide_tabbar
-            },
-        },{
-            navigationOptions:{
-                initialRouteName:"TichDiem_Screen",
-          }
-        }), //Home_ChiTietSanPham_GioHang_Wrap {
-           
-        NganhHangScreen:{
-            screen:NganhHang,
-            navigationOptions:opt_hide_tabbar
-        },
-
-        Home_ChitietSanPham_Wrap:StackNavigator({
-            Home_ChitietSanPham_Screen:{
-                screen:ChiTietSanPham,
-                navigationOptions: opt_hide_tabbar
-            },
-            Home_ChiTietSanPham_GioHang_Wrap:StackNavigator({
-                Home_ChitietSanPham_GioHang_Screen:{
-                    screen:GioHang,
-                    navigationOptions: opt_hide_tabbar
-                },
-                Home_ChitietSanPham_GioHang_ThanhToan_Screen:{
-                    screen:ThanhToanForm,
-                    navigationOptions: opt_hide_tabbar
-                },
-                Home_ChitietSanPham_GioHang_ChiTietSanPham_Screen:{
-                    screen:ChiTietSanPham,
-                    navigationOptions:opt_hide_tabbar
-                },
-            },{
-                navigationOptions:{
-                    initialRouteName:"Home_ChitietSanPham_GioHang_Screen",
-              }
-            }), //Home_ChiTietSanPham_GioHang_Wrap 
-        },{
-            navigationOptions:{
-                initialRouteName:"Home_ChitietSanPham_Screen",
-          }
-        }), //Home_ChitietSanPham_Wrap 
-
+        }
     },{
         navigationOptions:{
             headerStyle:{
@@ -181,7 +72,7 @@ export const MainScreenNavigator = TabNavigator({
             tabBarLabel:'Trang chủ',
             tabBarIcon:  <FontAwesome color="black" size={28} name="home"/>,
         }
-    }), //end home stack* */
+    }),
     TaiKhoanTab:StackNavigator({
         TaiKhoan_Screen:{
             screen:TaiKhoan,

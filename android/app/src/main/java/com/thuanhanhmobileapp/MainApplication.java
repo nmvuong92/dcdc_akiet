@@ -1,7 +1,8 @@
-package com.vuondao.qcafe;
+package com.vietydao.dungcudienchan;
 
 import android.app.Application;
 
+import com.dylanvann.fastimage.FastImageViewPackage;
 import com.facebook.react.ReactApplication;
 import org.reactnative.camera.RNCameraPackage;
 
@@ -31,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
             new RNDeviceInfo(),
             //new ReactNativePushNotificationPackage(), // <---- Add the Package
             new VectorIconsPackage(),
-            new ReactNativeOneSignalPackage()
+            new ReactNativeOneSignalPackage(),
+            new FastImageViewPackage()
 
       );
     }

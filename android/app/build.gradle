@@ -107,11 +107,11 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "com.vuondao.qcafe"
+        applicationId "com.vietydao.dungcudienchan"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 11
-        versionName "7.3"
+        versionCode 1
+        versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -161,6 +161,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-fast-image')
     implementation project(':react-native-onesignal')
     implementation project(':react-native-device-info')
     implementation project(':react-native-vector-icons')
